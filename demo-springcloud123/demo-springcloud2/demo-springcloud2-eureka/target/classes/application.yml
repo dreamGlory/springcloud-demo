@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: demo-springcloud2-eureka
+
+eureka:
+  instance:
+    hostname: eureka2 #注册中心IP地址
+  client:
+    register-with-eureka: true  #是否向注册中心注册自己，默认 true
+    fetch-registry: true
+    service-url: #服务注册中心配置，，指定注册中心位置
+      defaultZone: http://eureka1:8081
